@@ -117,35 +117,6 @@ glfw.make_context_current(window)
 # First three are vertices coordinate
 # Second last is color rgb
 
-vertices = [-0.5, -0.5,  0.5, 0.0, 0.0,
-             0.5, -0.5,  0.5, 1.0, 0.0,
-             0.5,  0.5,  0.5, 1.0, 1.0,
-            -0.5,  0.5,  0.5, 0.0, 1.0,
-
-            -0.5, -0.5, -0.5, 0.0, 0.0,
-             0.5, -0.5, -0.5, 1.0, 0.0,
-             0.5,  0.5, -0.5, 1.0, 1.0,
-            -0.5,  0.5, -0.5, 0.0, 1.0,
-
-             0.5, -0.5, -0.5, 0.0, 0.0,
-             0.5,  0.5, -0.5, 1.0, 0.0,
-             0.5,  0.5,  0.5, 1.0, 1.0,
-             0.5, -0.5,  0.5, 0.0, 1.0,
-
-            -0.5,  0.5, -0.5, 0.0, 0.0,
-            -0.5, -0.5, -0.5, 1.0, 0.0,
-            -0.5, -0.5,  0.5, 1.0, 1.0,
-            -0.5,  0.5,  0.5, 0.0, 1.0,
-
-            -0.5, -0.5, -0.5, 0.0, 0.0,
-             0.5, -0.5, -0.5, 1.0, 0.0,
-             0.5, -0.5,  0.5, 1.0, 1.0,
-            -0.5, -0.5,  0.5, 0.0, 1.0,
-
-             0.5, 0.5, -0.5, 0.0, 0.0,
-            -0.5, 0.5, -0.5, 1.0, 0.0,
-            -0.5, 0.5,  0.5, 1.0, 1.0,
-             0.5, 0.5,  1.0, 0.0, 1.0]
              
 #Depan, Belakang, Kanan, Kiri, Bawah, Atas
 #Kiri bawah, Kanan Bawah, Kanan Atas, Kiri Atas
@@ -178,6 +149,7 @@ vertices_wall = [-1.5, -1.0,  0.5, 0.0, 0.0,
                   1.5,  3.0,  0.0, 1.0, 0.0,
                  -1.5,  3.0,  0.0, 1.0, 1.0,
                  -1.5,  3.0,  0.5, 0.0, 1.0]
+            
             
 vertices_floor = [-10.0, -1.0,  10.0, 0.0, 0.0,
                    10.0, -1.0,  10.0, 1.0, 0.0,
@@ -220,12 +192,7 @@ from obj_sledge import vertices_sledge, indices_sledge, vertices_kayu, indices_k
 
 # For connecting da dots!! 
 # for each vertices is connected to where!
-indicies = [0,  1,  2,  2,  3,  0,
-            4,  5,  6,  6,  7,  4,
-            8,  9, 10, 10, 11,  8,
-           12, 13, 14, 14, 15, 12,
-           16, 17, 18, 18, 19, 16,
-           20, 21, 22, 22, 23, 20]
+
 
 indices_wall = [ 0,  1,  2,  2,  3,  0,
                  4,  5,  6,  6,  7,  4,
@@ -666,7 +633,7 @@ saw_texture = load_texture("TEXTURE/saw_gagang.jpg", texture[0])
 sawo_texture = load_texture("TEXTURE/floor.jpg", texture[4])
 key_texture = load_texture("TEXTURE/metal.jpg", texture[5])
 hammer_texture = load_texture("TEXTURE/metal.jpg", texture[6])
-gagang_texture = load_texture("TEXTURE/floor.jpg", texture[7])
+gagang_texture = load_texture("TEXTURE/kayu.jpg", texture[7])
 bor = load_texture("TEXTURE/metal.jpg", texture[8])
 tombol = load_texture("TEXTURE/metal.jpg", texture[9])
 matabor = load_texture("TEXTURE/floor.jpg", texture[10])
